@@ -38,13 +38,13 @@ router.get("/mens/:id", async (req, res) =>{
 
 
 // get req single Individual data with ranking number
-router.get("/menss/:rank", async (req, res) =>{
+router.get("/men/:rank", async (req, res) =>{
     try{
         const ranking = req.params.rank;
         const getMen = await MensRanking.find({ranking});
         res.status(200).send(getMen);
     }catch(e){
-        res.status(400).send(e)
+        res.status(400).send({"can": "fun"})
     }
 })
 
