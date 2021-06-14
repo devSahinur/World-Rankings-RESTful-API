@@ -28,7 +28,7 @@ const menSchema = new mongoose.Schema({
         required:true,
         trim:true
     },
-    score:{
+    event:{
         type:String,
         default: "100m"
     }  

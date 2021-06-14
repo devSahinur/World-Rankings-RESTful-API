@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-const uri = "mongodb+srv://skmsi:skmsi@cluster0.1zupo.mongodb.net/olymics?retryWrites=true&w=majority";
+const uri = `${process.env.DB_HOST}`;
 
 mongoose.connect(uri, {
     useCreateIndex:true,
