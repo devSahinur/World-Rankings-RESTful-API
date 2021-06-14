@@ -25,11 +25,23 @@ router.get("/mens", async (req, res) =>{
     }
 })
 
-// get req single Individual data
+// get req single Individual data with id
 router.get("/mens/:id", async (req, res) =>{
     try{
         const _id = req.params.id;
         const getMen = await MensRanking.findById({_id});
+        res.status(200).send(getMen);
+    }catch(e){
+        res.status(400).send(e)
+    }
+})
+
+
+// get req single Individual data with ranking number
+router.get("/menss/:rank", async (req, res) =>{
+    try{
+        const ranking = req.params.rank;
+        const getMen = await MensRanking.find({ranking});
         res.status(200).send(getMen);
     }catch(e){
         res.status(400).send(e)
