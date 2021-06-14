@@ -28,7 +28,7 @@ For development, you will only need Node.js and a node global package, npm, inst
 
 Open or create a `.env` file then edit add this setting
 ```
- (EX. DB_HOST = mongodb+srv://username:password@cluster0.1zupo.mongodb.net/databaseName?retryWrites=true&w=majority  )
+(EX. DB_HOST = mongodb+srv://username:password@cluster0.1zupo.mongodb.net/databaseName?retryWrites=true&w=majority)
 
 ```
 
